@@ -18,6 +18,7 @@ class lldp (
 ) inherits ::lldp::params {
 
   # validate parameters here
+  validate_bool($manage_repo)
 
   class { '::lldp::install': } ->
   class { '::lldp::config': } ~>
