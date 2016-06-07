@@ -6,7 +6,7 @@ class lldp::install {
 
   yumrepo { 'vbernat':
     ensure   => present,
-    name     => 'vbernat-lldp',
+    descr    => 'vbernat-lldp',
     baseurl  => "http://download.opensuse.org/repositories/home:/vbernat/CentOS_${::operatingsystemmajrelease}/",
     gpgcheck => 0,
     notify   => Exec['clean-cache'],
